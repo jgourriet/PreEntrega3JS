@@ -1,0 +1,241 @@
+@charset "UTF-8";
+/* ENLACE DE LA FUENTE */
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,400;0,600;0,800;1,200;1,400;1,600;1,800&display=swap");
+/* font-family: 'Nunito Sans', sans-serif; */
+/* RESET INICIO */
+/* Con este reset vamos a resolver:
+
+    Unificar el uso de Custom Properties
+    Problemas de box-model más generales
+    Problemas con imágenes, videos e iconos svg
+    Problemas con tipografías y etiquetas input en formularios
+    Unificar la tipografía de todas las etiquetas de una web
+
+*/
+/* Aquí definimos las Custom Properties */
+:root {
+  --color-primario: #181818;
+  --color-secundario: #f0f0f0;
+  /* Tipografía */
+  --tipo-principal: 'Nunito Sans', sans-serif;
+  --tipo-secundario: Helvetica, Arial, sans-serif; }
+
+/* Las adaptamos al modo oscuro */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primario: #f0f0f0;
+    --color-secundario: #181818; } }
+
+/* Opcional */
+/* Configuramos si un usuario ha activado el modo de alto contraste. (WD) */
+@media (prefers-contrast: high) {
+  :root {
+    --color-primario: black;
+    --color-secundario: white; } }
+
+/* Opcional */
+/* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animaciones */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none;
+    transition: none; } }
+
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline; }
+nav img{
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+  margin-left: 10px;
+}
+/* Evitamos problemas con las imágenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional */
+  object-fit: cover;
+  object-position: center center; }
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block; }
+
+/* Excepto las que se encuentran dentro de párrafos... */
+p a {
+  display: inline; }
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none; }
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth; }
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit; }
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+/* Configuramos el texto que seleccionamos */
+::selection {
+  background-color: var(--color-primario);
+  color: var(--color-secundario); }
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  hyphens: auto;
+  background-color: transparent;
+  display: block;
+  color: inherit;
+  /* Opcional */
+  appearance: none; }
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Evitamos problemas con lis SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor; }
+
+/* Configuramos la tipografía para toda la web */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--tipo-principal);
+  color: var(--color-primario);
+  background-color: var(--color-secundario);
+  /* Opcional */
+  line-height: 1.4em;
+  hyphens: auto;
+  /*Pendiente*/
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+  div .carousel-inner{
+    width: 100%;
+    height:calc(100vh - 86px)
+  }
+  div .carousel-inner img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+.darkMode {
+  color: var(--color-secundario);
+  background-color: var(--color-primario); }
+
+.title {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  }
+
+  tr{
+    color: #f0f0f0;
+  }
+  .card-body{
+    color: rgb(247, 247, 247);
+    background-color: #181818;
+    text-align: center;
+  }
+  .card{
+    background-color: #35333f;
+    color: #f0f0f0;
+  }
+/* RESET FIN */
+.padding--margin {
+  padding: 2rem;
+  margin: 3rem; }
+
+.padding--margin {
+  padding: 2rem;
+  margin: 3rem; }
+
+.barra {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100; }
+
+.padding--margin {
+  padding: 2rem;
+  margin: 3rem; }
+
+.hero {
+  background-color: red; }
+
+.padding--margin {
+  padding: 2rem;
+  margin: 3rem; }
+
+.padding--margin {
+  padding: 2rem;
+  margin: 3rem; }
+
+.padding--margin {
+  padding: 2rem;
+  margin: 3rem; }
+
+.espacio {
+  margin: 2rem 0 1rem 0; }
+
+#botonDatosCareers {
+  margin: 1rem 0; }
+
+.padding--margin {
+  padding: 2rem;
+  margin: 3rem; }
+
+.padding--margin {
+  padding: 2rem;
+  margin: 3rem; }
+
+.padding--margin {
+  padding: 2rem;
+  margin: 3rem; }
+
+.padding--margin {
+  padding: 2rem;
+  margin: 3rem; }
+
+.padding--margin {
+  padding: 2rem;
+  margin: 3rem; }
+
+.padding {
+  padding: 2rem; }
+
+.pie-flex {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-around;
+  text-align: center; }
+
+.pie-flex img {
+  margin: 0.2rem;
+  width: 2.5rem; }
